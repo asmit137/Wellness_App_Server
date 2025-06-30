@@ -61,6 +61,11 @@ RECAPTCHA_SECRET_KEY=your_recaptcha_secret_key
 - `POST /api/consultation` – Book a consultation
 - `DELETE /api/consultation/:id` – Cancel a consultation
 
+### For Testing
+- `GET /api/consultation/test` – Test consultations api
+- `GET /api/goals/test` – Test goal api
+- `GET /api/auth/test` – Test auth api
+
 ## ✅ Setup & Run
 
 ```bash
