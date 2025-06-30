@@ -5,6 +5,11 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 const axios = require("axios");
 
+app.get("/", (req, res)=>{
+  res.send(`Your are in Auth API`)
+})
+
+
 const createToken = (user) => {
   return jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
     expiresIn: "7d",

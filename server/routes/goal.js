@@ -3,12 +3,16 @@ const router = express.Router();
 const Goal = require("../models/Goal");
 const auth = require("../middleware/authMiddleware");
 
-// Create Goal
+app.get("/", (req, res)=>{
+  res.send(`Your are in Goal API`)
+})
+
+
 router.post("/", auth, async (req, res) => {
   try {
     const { goalType, value, target } = req.body;
     const goal = new Goal({
-      userId: req.userId, // ✅ make sure req.user.userId exists
+      userId: req.userId, 
       goalType,
       value,
       target
@@ -21,7 +25,7 @@ router.post("/", auth, async (req, res) => {
   }
 });
 
-// Get Goals
+
 router.get("/", auth, async (req, res) => {
   try {
     const goals = await Goal.find({ userId: req.userId });
@@ -32,7 +36,7 @@ router.get("/", auth, async (req, res) => {
   }
 });
 
-// Update Goal
+
 router.put("/:id", auth, async (req, res) => {
   try {
     const { goalType, value, target } = req.body;
@@ -48,7 +52,7 @@ router.put("/:id", auth, async (req, res) => {
   }
 });
 
-// Delete Goal
+
 router.delete("/:id", auth, async (req, res) => {
   try {
     await Goal.deleteOne({ _id: req.params.id, userId: req.userId });
