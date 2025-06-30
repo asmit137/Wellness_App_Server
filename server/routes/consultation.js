@@ -48,7 +48,7 @@ router.delete("/:id", auth, async (req, res) => {
   try {
     const deleted = await Consultation.findOneAndDelete({
       _id: req.params.id,
-      user: req.user.userId,
+      user: req.userId,
     });
 
     if (!deleted) {
