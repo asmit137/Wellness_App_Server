@@ -1,6 +1,12 @@
-# 🩺 Health Wellness App – Backend
+#  Health Wellness App – Backend
 
 This is the **backend server** for the Health Wellness App – a full-stack application aimed at helping users track wellness goals and book health consultations securely and efficiently.
+
+
+## 🔗 Catch Live Link
+
+See [Server Side](https://wellness-app-server.onrender.com)
+
 
 ## 🚀 Features
 
@@ -82,6 +88,14 @@ Make sure MongoDB is running and `.env` is properly configured.
 - Authenticated routes use JWT middleware
 - CAPTCHA protects auth endpoints
 
+
+## 🔗 Frontend Link
+
+See [Health_Wellness_App_ Frontend](https://github.com/asmit137/wellness_App_Client/)
+
+
+
 ---
 
 💡 Built with love by the Health Wellness App Team
+
