@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 const axios = require("axios");
 
-app.get("/", (req, res)=>{
+router.get("/test", (req, res)=>{
   res.send(`Your are in Auth API`)
 })
 

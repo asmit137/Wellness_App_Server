@@ -3,7 +3,7 @@ const router = express.Router();
 const Goal = require("../models/Goal");
 const auth = require("../middleware/authMiddleware");
 
-app.get("/", (req, res)=>{
+router.get("/test", (req, res)=>{
   res.send(`Your are in Goal API`)
 })
 

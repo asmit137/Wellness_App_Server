@@ -3,9 +3,9 @@ const router = express.Router();
 const auth = require("../middleware/authMiddleware");
 const Consultation = require("../models/Consultation");
 
-app.get("/", (req, res)=>{
-  res.send(`Your are in Consultation API`)
-})
+router.get("/test", (req, res) => {
+  res.send("You are in Consultation API");
+});
 
 
 router.get("/", auth, async (req, res) => {
